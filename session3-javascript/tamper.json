@@ -1,0 +1,15 @@
+// ==UserScript==
+// @name         Ogilvy.co.za Tamper
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        http://www.ogilvy.co.za*
+// @grant        none
+// @require http://code.jquery.com/jquery-latest.js
+// ==/UserScript==
+(function() {
+    'use strict';
+
+    alert("it is working!");
+})();
