@@ -2,7 +2,7 @@ Dear Ogilvy class!
 
 First off, welcome to the geeky depths of Github.
 
-Please feel free to navigate to the correct section and use this to get a up-to-date version of the code as I work through it.
+Please feel free to navigate to the correct section and use this to get an up-to-date version of the code as I work through it.
 
 Cheers,
 
