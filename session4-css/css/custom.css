@@ -1,0 +1,30 @@
+#leftDiv{
+  float:left;
+  width:50%;
+}
+
+#rightDiv{
+  float:right;
+  width:50%;
+}
+
+#leftDiv img{
+  width:100%;
+}
+
+#RightDiv img{
+  width:50%;
+  float:left;
+}
+
+p.redPara{
+  color:red;
+}
+
+p.greenPara{
+  color:green;
+}
+
+body{
+  margin-bottom:1000px;
+}

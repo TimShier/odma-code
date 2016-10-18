@@ -4,16 +4,25 @@
         </script>
   </head>
   <body>
+    <a href="http://www.something.com" class="thisIsSpecial">tester</a>
     <h1 id="mainHeading">Session 3 will be coded and uploaded here.</h1>
     <h1 class="specialHeading">Session 3 will be coded and uploaded here.</h1>
-    <p>Nothing yet...</p>
+    <p style="font-size:100px;">Nothing yet...</p>
     <p id="clickable" onclick="alert('clicked');">click me</p>
 
+    <p class="thisIsSpecial">some copy</p>
+
+
+
     <script>
+      // get the main heading id and set the color to red.
       $("#mainHeading").css("color","red");
       $("p").css("color","blue");
       $(".specialHeading").css("color","green");
-      //alert("this is javascript doing something");
+      $(".thisIsSpecial").css("color","#00FF00");
+      /*alert("this is javascript doing something");
+      more comments here.
+      */
     </script>
   </body>
 </html>
