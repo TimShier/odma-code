@@ -1,5 +1,9 @@
 <html>
   <head>
+
+    <script src="./jquery.min.js">
+    </script>
+
     <style>
       #transitionMe {
         color: #000;
@@ -17,16 +21,17 @@
         background-color: blue;
       }
 
-      /* The animation code */
-      @keyframes example {
-        from {background-color: red; width:50px;}
-        to {background-color: yellow; width:500px;}
+
+      @keyframes someRandomName {
+        from {background-color: red; width:50px; height:100px; margin-left: 0px;}
+        to {background-color: yellow; width:500px; height:1000px; margin-left:100px;}
       }
       #animateMe{
         width: 500px;
         height: 100px;
-        background-color: yellow;
-        animation-name: example;
+        margin-left:100px;
+        background-color: blue;
+        animation-name: someRandomName;
         animation-duration: 4s;
       }
     </style>
@@ -38,8 +43,24 @@
     <p onclick="drawlineRaw();">Draw line on Canvas</p>
     <p onclick="drawCircleRaw();">Draw circle on Canvas</p>
     <p onclick="drawTextRaw();">Draw text on Canvas</p>
+    <p onclick="hideAnimation();">Hide animation</p>
+    <p onclick="showAnimation();">Show animation</p>
+    <p onclick="toggleAnimation();">Toggle animation</p>
+
 
     <script>
+      function hideAnimation(){
+        $("#animateMe").hide();
+      }
+
+      function showAnimation(){
+        $("#animateMe").show();
+      }
+
+      function toggleAnimation(){
+        $("#animateMe").toggle();
+      }
+
       function drawlineRaw(){
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
