@@ -1,10 +1,14 @@
 <html>
   <head>
-
+    <!-- import jquery (I downloaded the script) so that we can use it below  -->
     <script src="./jquery.min.js">
     </script>
 
     <style>
+      /* in order to use a transition, we need to first set up the initial departure point
+      in this case we're setting color to black, telling all the transitions for each of the browsers
+      to apply everything over 3 seconds with ease-in-out, we're setting the width and height to 100px
+      and are setting background to red */
       #transitionMe {
         color: #000;
         -webkit-transition: all 3s ease-in-out; // safari
@@ -16,16 +20,21 @@
         background: red;
       }
 
+      /* When we hover over the transition, we want the width to change to 300 and the background color
+      to become blue. Keep in mind that the transitions that you set above will apply so it'll
+      take 3 seconds to change from one to the other */
       #transitionMe:hover{
         width: 300px;
         background-color: blue;
       }
 
-
+      /* set up the keyframes for the animation. It will automatically shift between the from and to css rules */
       @keyframes someRandomName {
         from {background-color: red; width:50px; height:100px; margin-left: 0px;}
         to {background-color: yellow; width:500px; height:1000px; margin-left:100px;}
       }
+      /* set the css rules for animateMe - these apply both before and after the animation is completed... which
+      is why it goes blue when it's done */
       #animateMe{
         width: 500px;
         height: 100px;
@@ -39,7 +48,9 @@
   <body>
     <div id="transitionMe">This div will transition</div>
     <div id="animateMe">This div will animate</div>
+    <!-- add an HTML5 canvas and give it the name myCanvas  -->
     <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    <!-- add some paragraphs and set each up to call the javascript functions below -->
     <p onclick="drawlineRaw();">Draw line on Canvas</p>
     <p onclick="drawCircleRaw();">Draw circle on Canvas</p>
     <p onclick="drawTextRaw();">Draw text on Canvas</p>
@@ -49,18 +60,23 @@
 
 
     <script>
+    // hide animateMe
       function hideAnimation(){
         $("#animateMe").hide();
       }
 
+      // show animateMe
       function showAnimation(){
         $("#animateMe").show();
       }
 
+      // toggle animate me... so, if it's visible make it invisible.
+      // if it's invisible, make it visible... toggle back and forth
       function toggleAnimation(){
         $("#animateMe").toggle();
       }
 
+      // add a line to the canvas
       function drawlineRaw(){
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
@@ -69,6 +85,7 @@
         ctx.stroke();
       }
 
+      // draw a circle in the canvas
       function drawCircleRaw(){
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
@@ -77,6 +94,7 @@
         ctx.stroke();
       }
 
+      // add text to the canvas
       function drawTextRaw(){
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");

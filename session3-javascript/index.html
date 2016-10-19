@@ -1,15 +1,22 @@
 <html>
   <head>
+    <!-- import the Jquery script from the Google CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
         </script>
   </head>
   <body>
+    <!-- add a link and give it a class -->
     <a href="http://www.something.com" class="thisIsSpecial">tester</a>
+    <!-- add an h1 with an ID -->
     <h1 id="mainHeading">Session 3 will be coded and uploaded here.</h1>
+    <!-- add an h1 with a class  -->
     <h1 class="specialHeading">Session 3 will be coded and uploaded here.</h1>
+    <!-- add a paragraph and update the style inline -->
     <p style="font-size:100px;">Nothing yet...</p>
+    <!-- add a para and set an onclick event which displays an alert (a pop up where you must select OK) -->
     <p id="clickable" onclick="alert('clicked');">click me</p>
 
+    <!-- reuse the same class as above so we can play with some of the functionality -->
     <p class="thisIsSpecial">some copy</p>
 
 
@@ -17,11 +24,14 @@
     <script>
       // get the main heading id and set the color to red.
       $("#mainHeading").css("color","red");
+      // make all paragraphs blue
       $("p").css("color","blue");
+      // make all special heading classes green
       $(".specialHeading").css("color","green");
+      // make all classes with this is special Green (remember, the format is Red Green Blue and ranges from 0 to FF for each. So, #00FF00 means zero red, 100% green and 0 blue).
       $(".thisIsSpecial").css("color","#00FF00");
-      /*alert("this is javascript doing something");
-      more comments here.
+      /*
+        in Javascript you can also add comments like this.
       */
     </script>
   </body>

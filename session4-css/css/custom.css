@@ -1,30 +1,37 @@
+/* set the left div to float left and have a width of 50% */
 #leftDiv{
   float:left;
   width:50%;
 }
 
+/* set the right div to float right and have a width of 50% */
 #rightDiv{
   float:right;
   width:50%;
 }
 
+/* find all images inside leftDiv and make them all 100% of the width of the object that they are inside */
 #leftDiv img{
   width:100%;
 }
 
+/* as above, get all images in rightdiv and set their widths. Note, we're still floating them left even though they're in the right div. You you float it right to if you wanted but in order to get them onto the same page we must specify a float. */
 #RightDiv img{
   width:50%;
   float:left;
 }
 
+/* find all paragraphs with the class redPara and make it red*/
 p.redPara{
   color:red;
 }
 
+/* find all paragraphs with the class greenPara and make it green */
 p.greenPara{
   color:green;
 }
 
+/*add some space at the bottom of the page... I added this just so that it was easier to show you on the projector but left it in so you can see how it's done */
 body{
   margin-bottom:1000px;
 }

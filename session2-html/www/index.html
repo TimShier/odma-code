@@ -1,20 +1,33 @@
 <!DOCTYPE html>
+<!-- DOCTYPE tells the browser what sort of content is coming... in this case it's HTML -->
 <html>
+  <!-- the HTML document has started... -->
   <head>
+    <!-- let's set the page title. Keep in mind, this is the name on the tab, not the content in the page. -->
     <title>some title of awesomeness</title>
   </head>
+
+  <!-- let's get started on body, remember, in body, all the content that is rendered to the screen exists... -->
   <body>
+    <!-- add some heading tags. H1 -> H6 are all valid -->
     <h1>This is a heading</h1>
     <h2>This is a smaller heading</h2>
     <h3>This is a smallerer heading</h3>
-    <a href="http://www.something.com" target="_blank">some content</a>
+    <!-- Create a link to www.something.com and have it open in a new tab.-->
+    <a href="http://www.something.com" target="_blank">open Something.com in a new window</a>
+
+    <!-- add a marquee... just for fun. -->
     <marquee behavior="alternate">
-      <h1>headng</h1>
+      <h1>headinng</h1>
       <h2>heading2</h2>
+      <p>The rest bounces from side to side.</p>
+      <p>Changing behaviour (note american spelling) will make it come for the left or the right..</p>
     </marquee>
 
+    <!-- create an Ordered List... an OL will pust numbers for each list item i.e. 1) Item First -->
     <ol>
-      <li>Item dfgdfg</li>
+      <!-- add some List Items to the Ordered List  -->
+      <li>Item first</li>
       <li>Item fghfh</li>
       <li>Item sdf</li>
       <li>Item dfg</li>
@@ -22,7 +35,9 @@
       <li>Item sdf</li>
     </ol>
 
+    <!-- create an unordered list for unordered lists, it adds a bullet point before the list item. -->
     <ul>
+      <!-- add some list items to the Unordered List  -->
       <li>Item dfgdfg</li>
       <li>Item fghfh</li>
       <li>Item sdf</li>
@@ -31,36 +46,29 @@
       <li>Item sdf</li>
       <li><h1>BLAH</h1></li>
     </ul>
-    somsdflaksdjfalsdkf
 
+    <!-- a br forces the end of the current line onto a new line i.e. doing it twice will add a space  -->
     <br/>
     <br/>
+
+    <!-- create a Horizontal line (Rule) across the page -->
     <hr/>
 
 
+    <!-- add a div and include some INLINE styling to make it half the width of the screen. The float it to the left so that the div knows it needs to try stick to the left of the page  -->
     <div style="width:50%; float:left;">
 
+      <!-- add a paragraph or three  -->
       <p>something in here sdfgkjdfsglk sdflgkj sdfg;lkj s;lfkgjs;df ;lksdfg; lkjsdfg lkjsd;flgkj sdf;lgkj s;dflkgj sdkfg ;lskdf g;lskdfjg;lskdfjg ;lsdkfg ;slkdfjg ;lsdkfjg  l;ksdaf;gl kjsdfg;lk sdfg;l sdfg; lskdf j</p>
       <p>something else in here</p>
-
     </div>
+    <!-- add another div of width 50% and float it right  -->
     <div style="width:50%; float:right;">
-      something in there
+      something in there - on the right yo!
     </div>
 
+    <!-- add an image... the first one looks up an image on the internet and is known as an absolute reference. The second is a relative reference and looks up the image fistpump.jpg which is in the img folder (relative to where this index.html file is currently located) -->
     <img src="http://feelgrafix.com/data/cool-pictures/Cool-pictures-4.jpg" width ="110px"/>
     <img src="./img/fistpump.jpg" width ="100px"/>
-
-
-
-
-
-
-
-    <br/>
-    <br/>
-    <br/>
-    <br/><br/>
-    <br/>
   </body>
 </html>
