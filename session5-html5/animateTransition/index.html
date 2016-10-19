@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style>
+      #transitionMe {
+        color: #000;
+        -webkit-transition: all 3s ease-in-out; // safari
+        -moz-transition: all 3s ease-in-out; // mozilla
+        -o-transition: all 3s ease-in-out; //
+        transition: all 3s ease-in-out;
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+
+      #transitionMe:hover{
+        width: 300px;
+        background-color: blue;
+      }
+
+      /* The animation code */
+      @keyframes example {
+        from {background-color: red; width:50px;}
+        to {background-color: yellow; width:500px;}
+      }
+      #animateMe{
+        width: 500px;
+        height: 100px;
+        background-color: yellow;
+        animation-name: example;
+        animation-duration: 4s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="transitionMe">This div will transition</div>
+    <div id="animateMe">This div will animate</div>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    <p onclick="drawlineRaw();">Draw line on Canvas</p>
+    <p onclick="drawCircleRaw();">Draw circle on Canvas</p>
+    <p onclick="drawTextRaw();">Draw text on Canvas</p>
+
+    <script>
+      function drawlineRaw(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+      }
+
+      function drawCircleRaw(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+      }
+
+      function drawTextRaw(){
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World",10,50);
+      }
+    </script>
+  </body>
+</html>
